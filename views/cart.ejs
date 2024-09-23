@@ -1,0 +1,31 @@
+
+    <%- include ("partials/dashboard.ejs") %>
+
+
+    <% if(locals.cart && locals.cart.length > 0){ %> 
+        <table style="margin-top: 100px;">
+            <ol>
+            <% cart.map((element, index) => { %> 
+                    <tr><td> <li> <span><%= index + 1 %>.</span> Checkings: <%= element.checkings %></td> <td>Balance: <%= element.bal %> </td> <td>Info: <%= element.information %> </td> <td>Price: <%= element.priceText %></td> <td> <button id="<%= index %>" class="deleteBtns">Delete</button> </li> </td></tr>
+                <% }) %> 
+
+            </ol>
+            </table>
+
+            <div id="acctDetails">
+
+                
+
+            </div>
+
+            <button id="checkout">CHECKOUT</button> <br>
+
+           
+     
+    <%  } else{ %>
+        <h1 id="emptyCart">Nothing in cart</h1>
+    <% } %> 
+
+    <script src="/scripts/cart.js"></script>
+</body>
+</html>

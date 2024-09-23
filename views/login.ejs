@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sigin</title>
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body>
+    
+<nav>
+    <div class="logoDiv">
+        <h2> ORBIT <span>LOGS </span></h2>
+    </div>
+
+    
+    <div class="cta">
+        <p> Log in </p>
+        <p> Sign Up </p>
+
+
+</nav>
+
+<div class="heroSection">
+<div class="formDiv">
+<h3>Log In</h3>
+<p>Enter your email and password to Login</p>
+
+<form action="/dashboard" method="post">
+    <label for="Email">EMAIL*</label>
+    <input type="email" name="username" id="Email" required autofocus>
+    <label for="pwrd">Password*</label>
+    <input type="password" name="password" id="pwrd" required>
+
+    <input type="submit" value="Log In" id="logInBtn">
+
+    <% if(locals.error){ %> 
+        <p id="error"><%= error %></p>
+    <% } %>
+
+    <p>Don't have an account? <a href="signup.html">SignUp</a></p>
+
+</form>
+</div>
+</div>
+</body>
+</html>

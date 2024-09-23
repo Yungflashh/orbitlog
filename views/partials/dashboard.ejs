@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DASHBOARD</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="/styles/citi.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<!-- <script src="scripts/app.js" defer></script> -->
+</head>
+<body>
+
+<nav>
+    <div class="logoDiv">
+        <h2> <a href="dashboard"> ORBITLOGS </a></h2>
+    </div>
+
+    <div class="cta">
+        <p>Balance <span>$0</span></p>
+       <p class="navList"> <a id="navLink" href="cart"><i class="fa-solid fa-cart-shopping"></i><span id="currentBalance">
+        <% if(locals.cookieValue){ %> 
+        <%= cookieValue %>
+        <% } else{%>
+            0
+        <% } %>  
+    </span> </a> </p>
+       <p class="navList">  <i class="fa-solid fa-user"> </i><%= user %></p>
+    </div>
+</nav>
