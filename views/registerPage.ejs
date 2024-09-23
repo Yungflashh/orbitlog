@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/register.css">
+
+</head>
+<body>
+
+        
+<nav>
+    <div class="logoDiv">
+        <h2> ORBIT <span>LOGS </span></h2>
+    </div>
+
+    
+    <div class="cta">
+        <a href="/"><p> Log in </p></a>
+</nav>
+
+    <div class="registerForm">
+        <form action="/register" method="post">
+            <h3>Register</h3>
+            <!-- <p>Enter your details below</p> -->
+            <label for="">Enter your username</label>
+            <input type="text" name="username" placeholder="Username" required>
+            <label for="">Enter your email</label>
+            <input type="email" name="email" placeholder="example@mail.com" required>
+            <label for="">Enter your password</label>
+            <input type="password" name="password" placeholder="password" required>
+            <label for="">Re-enter your password</label>
+            <input type="password" name="checkPassword" placeholder="Re-enter password" required>
+            <input type="submit" id="registerBtn" value="Register">
+            <% if(locals.error){ %>
+                <p id="error"><%= error %> </p>
+            <% } %>   
+        </form>    
+    </div>
+
+</body>
+</html>
