@@ -6,6 +6,7 @@ import pg from "pg";
 import cookieParser from "cookie-parser";
 import bcrypt from "bcryptjs";
 
+
 const app = express();
 const port = 3000;
 
@@ -22,7 +23,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         secure: false,
-        maxAge: 1000 * 60,
+        maxAge: 1000 * 60 * 5,
     }
 }))
 

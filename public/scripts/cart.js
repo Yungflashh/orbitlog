@@ -40,5 +40,15 @@ function getCookie(name) {
 
 checkout.addEventListener("click", ()=>{
     acctDetails.innerHTML = `<p> PAY HERE </p>`
-    acctDetails.innerHTML +=`<p>  BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <p> <p>  TRC => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <p>`
+    acctDetails.innerHTML +=`<p> USDT/BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <p> <p>  TRC => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <p>`
+    paid.style.display = "block"
+})
+
+let paid = document.getElementById("paid")
+
+
+paid.addEventListener("click", ()=>{
+    acctDetails.innerText = "PLS WAIT FOR CONFIRMATION"
+    checkout.style.display = "none"
+    
 })

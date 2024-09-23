@@ -11,9 +11,9 @@ a{
 }
 body{
     background-image: url(../asset/bg.jpg);
-    background-color: rgba(128, 128, 128,0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
-    color: aliceblue;
+    color: white;
     font-family:"Oswald", sans-serif;;
 }
 nav{
@@ -40,6 +40,7 @@ nav{
     gap: 10px;
     align-items: center;
     justify-content: center;
+    /* border: 3px solid red; */
 
 }
 
@@ -48,12 +49,7 @@ nav{
     gap: 10px;
     align-items: center;
 }
-    /* display: none;
-}
 
-#it{
-    border:2px solid red;
-} */
 
 
 label{
@@ -157,6 +153,114 @@ button:active{
     
 }
 
+#paid{
+    display: none;
+    width: 200px;
+    background-color: rgb(93, 144, 81);
+    margin-left: 500px;
+    margin-top: 20px;
+    text-align: center;
+}
 
 /* responsivesness */
+
+@media (max-width:450px)
+{
+    nav{
+        /* justify-content: center; */
+        font-size: 10px;
+    }
+
+
+
+    .logoDiv h2{
+        width: 100px;
+        display: flex;
+        font-size: 14px;
+        align-items: center;
+        gap: 2px;
+        margin-left: 0px;
+    }
+
+  
+label{
+    font-size: 14px;
+    margin: 2px;
+}
+
+.nav2{
+    border: none;
+    margin-top: 100px;
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 0px;
+
+    width: 100%;
+    
+}
+
+.nav2 label{
+    font-size: 9px;
+    border: none;
+}
+
+h3{
+    text-align: center;
+    font-size: 12px;
+    margin: 20px 0px;
+}
+
+li{
+    display: flex;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+td{
+    padding: 0px;
+    font-size: 8px;
+}
+
+th{
+    font-size: 10px;
+}
+
+button{
+    padding: 0px;
+    border-radius: 20px;
+    border: none;
+    font-size: 8px;
+}
+
+#checkout{
+    width:100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+
+#acctDetails{
+    text-align: center;
+    font-size: 12px;
+    /* border: 3px solid greenyellow; */
+    
+}
+
+#paid{
+    display: none;
+    width: 100%;
+}
+#emptyCart{
+    font-size: 18px;
+}
+
+
+
+}
 
