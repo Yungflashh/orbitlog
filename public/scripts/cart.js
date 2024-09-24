@@ -1,4 +1,7 @@
 const deleteBtns = document.querySelectorAll(".deleteBtns");
+const balance = document.getElementById("balance");
+const checkout = document.getElementById("checkout");
+let paid = document.getElementById("paid");
 
 deleteBtns.forEach(button => {
     console.log("Hey")
@@ -37,18 +40,24 @@ function getCookie(name) {
 }
 
 
-
-checkout.addEventListener("click", ()=>{
-    acctDetails.innerHTML = `<p> PAY HERE </p>`
-    acctDetails.innerHTML +=`<p> USDT/BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <p> <p>  TRC => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <p>`
-    paid.style.display = "block"
-})
-
-let paid = document.getElementById("paid")
-
-
-paid.addEventListener("click", ()=>{
-    acctDetails.innerText = "PLS WAIT FOR CONFIRMATION"
-    checkout.style.display = "none"
+if(checkout){
+    checkout.addEventListener("click", ()=>{
+        if (Number(balance.innerText) == 0){
+            alert("Not Enough Funds")
+            acctDetails.innerHTML = `<p> PAY HERE </p>`
+            acctDetails.innerHTML +=`<p> BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <p> <p> USDT/TRC => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <p>`
+            paid.style.display = "block"
+        }
     
-})
+        else{
+        }
+    })
+}
+
+if(paid){
+    paid.addEventListener("click", ()=>{
+        acctDetails.innerText = "PLS WAIT FOR CONFIRMATION"
+        checkout.style.display = "none"
+        
+    })
+}
