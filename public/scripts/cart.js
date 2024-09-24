@@ -42,11 +42,26 @@ function getCookie(name) {
 
 if(checkout){
     checkout.addEventListener("click", ()=>{
+
+
         if (Number(balance.innerText) == 0){
-            alert("Not Enough Funds")
+            alert("Insufficient Funds")
             acctDetails.innerHTML = `<p> PAY HERE </p>`
-            acctDetails.innerHTML +=`<p> BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <p> <p> USDT/TRC => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <p>`
+            acctDetails.innerHTML +=`<p> BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <button id="copyBTC"> Copy </button>  </p>  <p> USDT/TRC => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <button id="copyUSDT"> Copy </button><p> `
             paid.style.display = "block"
+
+            const btcButton = document.getElementById("copyBTC");
+            const usdtButton = document.getElementBy("copyUSDT");
+            
+            btcButton.addEventListener("click", () => {
+                navigator.clipboard.writeText("bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c");
+                alert("BTC address copied!");
+            });
+            
+            usdtButton.addEventListener("click", () => {
+                navigator.clipboard.writeText("TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE");
+                alert("USDT/TRC address copied!");
+            });
         }
     
         else{
