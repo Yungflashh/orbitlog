@@ -47,7 +47,7 @@ if(checkout){
         if (Number(balance.innerText) == 0){
             alert("Insufficient Funds")
             acctDetails.innerHTML = `<p> PAY HERE </p>`
-            acctDetails.innerHTML +=`<p> BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <button id="copyBTC"> Copy </button>  </p>  <p> UsdtTrc => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <button id="copyUSDT"> Copy </button><p> `
+            acctDetails.innerHTML +=`<p> BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <button id="copyBTC"> Copy </button>  </p>  <p> UsdtTrc20 => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <button id="copyUSDT"> Copy </button><p> `
             paid.style.display = "block"
 
             const btcButton = document.getElementById("copyBTC");
@@ -71,7 +71,7 @@ if(checkout){
 
 if(paid){
     paid.addEventListener("click", ()=>{
-        acctDetails.innerText = "PLS WAIT FOR CONFIRMATION"
+        acctDetails.innerText = "Your order would be delivered to your email after your payment is confirmed"
         checkout.style.display = "none"
         
     })
