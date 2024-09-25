@@ -161,6 +161,14 @@ button:active{
     margin-top: 20px;
     text-align: center;
 }
+#paid2{
+    display: none;
+    width: 200px;
+    background-color: rgb(93, 144, 81);
+    margin-left: 500px;
+    margin-top: 20px;
+    text-align: center;
+}
 
 /* responsivesness */
 

@@ -52,7 +52,7 @@ if(checkout){
             paid.style.display = "block"
 
             const btcButton = document.getElementById("copyBTC");
-            const usdtButton = document.getElementBy("copyUSDT");
+            const usdtButton = document.getElementById("copyUSDT");
             
             btcButton.addEventListener("click", () => {
                 navigator.clipboard.writeText("bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c");
