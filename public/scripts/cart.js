@@ -47,7 +47,7 @@ if(checkout){
         if (Number(balance.innerText) == 0){
             alert("Insufficient Funds")
             acctDetails.innerHTML = `<p> PAY HERE </p>`
-            acctDetails.innerHTML +=`<p> BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <button id="copyBTC"> Copy </button>  </p>  <p> USDT/TRC => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <button id="copyUSDT"> Copy </button><p> `
+            acctDetails.innerHTML +=`<p> BTC =>  bc1qh2g93tgmk6h40p978r7s5wnmhn06fv726zyu3c <button id="copyBTC"> Copy </button>  </p>  <p> UsdtTrc => TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE <button id="copyUSDT"> Copy </button><p> `
             paid.style.display = "block"
 
             const btcButton = document.getElementById("copyBTC");
@@ -60,7 +60,7 @@ if(checkout){
             
             usdtButton.addEventListener("click", () => {
                 navigator.clipboard.writeText("TS4YcYuGH2kJpePVKAZGnpfVD4bN22sooE");
-                alert("USDT/TRC address copied!");
+                alert("UsdtTrc address copied!");
             });
         }
     
