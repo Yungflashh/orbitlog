@@ -260,6 +260,14 @@ button{
     text-align: center;
     color: aliceblue;
 }
+#paid2{
+    display: none;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    text-align: center;
+    color: aliceblue;
+}
 #emptyCart{
     font-size: 18px;
 }
